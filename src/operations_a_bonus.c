@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations_a.c                                     :+:      :+:    :+:   */
+/*   operations_a_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 12:11:40 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/16 19:03:35 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/16 18:11:57 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_checker.h"
 
 void	sa(t_stack *stack)
 {
@@ -21,8 +21,6 @@ void	sa(t_stack *stack)
 	tmp = stack->a[0];
 	stack->a[0] = stack->a[1];
 	stack->a[1] = tmp;
-	find_index(stack);
-	write(1, "sa\n", 3);
 }
 
 void	ra(t_stack *stack)
@@ -37,8 +35,6 @@ void	ra(t_stack *stack)
 	while (++i < stack->size_a - 1)
 		stack->a[i] = stack->a[i + 1];
 	stack->a[i] = tmp;
-	find_index(stack);
-	write(1, "ra\n", 3);
 }
 
 void	rra(t_stack *stack)
@@ -53,8 +49,6 @@ void	rra(t_stack *stack)
 	while (--i > 0)
 		stack->a[i] = stack->a[i - 1];
 	stack->a[i] = tmp;
-	find_index(stack);
-	write(1, "rra\n", 4);
 }
 
 void	pa(t_stack *stack)
@@ -76,6 +70,4 @@ void	pa(t_stack *stack)
 	while (--i > 0)
 		stack->a[i] = stack->a[i - 1];
 	stack->a[i] = tmp;
-	find_index(stack);
-	write(1, "pa\n", 3);
 }

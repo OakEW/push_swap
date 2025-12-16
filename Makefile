@@ -6,7 +6,7 @@
 #    By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 19:07:02 by ywang2            #+#    #+#              #
-#    Updated: 2025/12/16 12:36:04 by ywang2           ###   ########.fr        #
+#    Updated: 2025/12/16 18:53:59 by ywang2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,20 @@ CFILES = $(addprefix $(SRCS_DIR), $(SRCS))
 
 OFILES = $(CFILES:.c=.o)
 
+B_SRCS = check_argv_a_bonus.c check_argv_b_bonus.c\
+		operations_a_bonus.c operations_b_bonus.c operations_c_bonus.c\
+		make_checker_bonus.c
+
+B_CFILES = $(addprefix $(SRCS_DIR), $(B_SRCS))
+
+B_OFILES = $(B_CFILES:.c=.o)
+
 SRCS_DIR = ./src/
 
 INCLUDES = -I ./include
 
 NAME = push_swap
-
+B_NAME = checker
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -31,15 +39,18 @@ all: $(NAME)
 ${NAME}: ${OFILES}
 	cc ${CFLAGS} -o ${NAME} ${OFILES}
 
+bonus: $(B_OFILES) $(B_OFILES)
+	cc ${CFLAGS} -o ${B_NAME} ${B_OFILES}
+
 %.o: %.c
-	cc -c $(CFLAGS) $(INCLUDES) $< -o $@
+	cc -c -g $(CFLAGS) $(INCLUDES) $< -o $@
 
 clean:
-	rm -f $(OFILES)
+	rm -f $(OFILES) $(B_OFILES)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(B_NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

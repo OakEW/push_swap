@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations_b.c                                     :+:      :+:    :+:   */
+/*   operations_b_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 12:13:25 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/16 18:15:08 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/16 18:12:20 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_checker.h"
 
 void	sb(t_stack *stack)
 {
@@ -21,8 +21,6 @@ void	sb(t_stack *stack)
 	tmp = stack->b[0];
 	stack->b[0] = stack->b[1];
 	stack->b[1] = tmp;
-	find_index(stack);
-	write(1, "sb\n", 3);
 }
 
 void	rb(t_stack *stack)
@@ -37,8 +35,6 @@ void	rb(t_stack *stack)
 	while (++i < stack->size_b - 1)
 		stack->b[i] = stack->b[i + 1];
 	stack->b[i] = tmp;
-	find_index(stack);
-	write(1, "rb\n", 3);
 }
 
 void	rrb(t_stack *stack)
@@ -53,8 +49,6 @@ void	rrb(t_stack *stack)
 	while (--i > 0)
 		stack->b[i] = stack->b[i - 1];
 	stack->b[i] = tmp;
-	find_index(stack);
-	write(1, "rrb\n", 4);
 }
 
 void	pb(t_stack *stack)
@@ -76,6 +70,4 @@ void	pb(t_stack *stack)
 	while (--i > 0)
 		stack->b[i] = stack->b[i - 1];
 	stack->b[i] = tmp;
-	find_index(stack);
-	write(1, "pb\n", 3);
 }
