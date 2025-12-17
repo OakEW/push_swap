@@ -6,11 +6,11 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/17 13:34:52 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/17 17:11:04 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_checker.h"
+#include "push_swap_bonus.h"
 
 t_int_arr	*full_check(int argc, char **argv)
 {

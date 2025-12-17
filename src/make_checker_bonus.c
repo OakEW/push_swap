@@ -6,11 +6,11 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:07:47 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/17 13:40:13 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/17 17:09:33 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_checker.h"
+#include "push_swap_bonus.h"
 
 int	check_sort(t_stack *stack)
 {
