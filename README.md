@@ -8,7 +8,7 @@
 Sorting algorithms and their complexities are common topics in job interviews. Now is a great time to explore these concepts, as you will likely encounter them in the future. The learning objectives of this project are rigor, proficiency in C, and the application of basic algorithms, with a particular focus on their complexity.
 
 ### Goal
-Writing an efficient sorting algorithm `push_swap` that sort a list of numbers in ascending order with 2 stacks and 11 operations (sa sb ss pa pb ra rb rr rra rrb rrr).
+Writing an efficient sorting algorithm `push_swap` that sort a list of numbers in ascending order with 2 stacks and 11 operations (`sa` `sb` `ss` `pa` `pb` `ra` `rb` `rr` `rra` `rrb` `rrr`).
 
 ## Instructions
 ### Compile
@@ -16,17 +16,20 @@ Run `make` for push_swap<br />Run `make bonus` for checker
 
 ### Test
 
-- `push_swap` takes as an argument the stack a formatted as a list of integers, display the shortest sequence of instructions needed to sort stack a with the smallest number at the top. 
-  - If no parameters are specified, the program must not display anything and should return to the prompt.
-  - In case of error, it must display "Error" followed by an ’\n’ on the standard error.
+`push_swap` 
+- takes as an argument the stack a formatted as a list of integers, display the shortest sequence of instructions needed to sort stack a with the smallest number at the top. 
+- If no parameters are specified, the program must not display anything and should return to the prompt.
+- In case of error, it must display "Error" followed by an ’\n’ on the standard error.
 Errors include, for example: some arguments not being integers, some arguments
 exceeding the integer limits, and/or the presence of duplicates<br />
-- `checker`takes as an argument the stack a formatted
+
+`checker`
+- takes as an argument the stack a formatted
 as a list of integers. If no argument is given, it stops and displays nothing.
-  - It will then wait and read instructions from the standard input, with each instruction followed by ’\n’. Once all the instructions have been read, the program has to execute them on the stack received as an argument.
+- It will then wait and read instructions from the standard input, with each instruction followed by ’\n’. Once all the instructions have been read, the program has to execute them on the stack received as an argument.
 If after executing those instructions, the stack a is actually sorted and the stack b is empty, then the program must display "OK" followed by a ’\n’ on the standard output.
-  - In every other case, it must display "KO" followed by a ’\n’ on the standard output.
-  - In case of error, you must display "Error" followed by a ’\n’ on the standard error. 
+- In every other case, it must display "KO" followed by a ’\n’ on the standard output.
+- In case of error, you must display "Error" followed by a ’\n’ on the standard error. 
 
 
 #### Benchmark
