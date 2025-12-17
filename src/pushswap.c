@@ -6,11 +6,24 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 10:58:41 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/16 13:12:11 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/17 17:17:43 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	check_sort(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack->size_a - 1 && stack->a[i] < stack->a[i + 1])
+		i++;
+	if (i == stack->size_a - 1)
+		return (1);
+	else
+		return (0);
+}
 
 void	sort_three(t_stack *stack)
 {
@@ -96,6 +109,8 @@ int	main(int argc, char **argv)
 
 	stack = set_stack(argc, argv);
 	if (!stack)
+		return (0);
+	if (check_sort(stack))
 		return (0);
 	push_swap(stack);
 	free (stack->a);
