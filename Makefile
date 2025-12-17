@@ -6,7 +6,7 @@
 #    By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 19:07:02 by ywang2            #+#    #+#              #
-#    Updated: 2025/12/16 18:53:59 by ywang2           ###   ########.fr        #
+#    Updated: 2025/12/17 18:58:48 by ywang2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ SRCS_DIR = ./src/
 INCLUDES = -I ./include
 
 NAME = push_swap
+
 B_NAME = checker
+
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
