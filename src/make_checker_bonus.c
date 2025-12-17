@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:07:47 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/16 18:13:58 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/17 13:40:13 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,13 +75,13 @@ int	check_buffer(char *buffer, t_stack *stack)
 		while (buffer[i] != '\n' && buffer[i] != 0)
 			i++;
 		if (!(i - j == 2 || i - j == 3))
-			return (write (1, "Error\n", 6));
+			return (write (2, "Error\n", 6));
 		else if (i - j == 2 && do_op(buffer, stack, j) < 0)
-			return (write (1, "Error\n", 6));
+			return (write (2, "Error\n", 6));
 		else if (i - j == 3 && do_op_2(buffer, stack, j) < 0)
-			return (write (1, "Error\n", 6));
+			return (write (2, "Error\n", 6));
 		if (buffer[i] != '\n')
-			return (write (1, "Error\n", 6));
+			return (write (2, "Error\n", 6));
 		i++;
 		j = i;
 	}

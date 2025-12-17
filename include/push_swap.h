@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:04 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/16 18:13:56 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/17 13:23:33 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int			check_dup(int *stash, int len);
 
 // check_argv_b.c
 t_int_arr	*full_check(int argc, char **argv);
+int			check_emt(int argc, char **argv);
 int			*ft_intcpy(int *dest, int *src, int n);
-void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t nmemb, size_t size);
 
 // initialize stack with a&b, it's size and target
