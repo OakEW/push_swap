@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:04 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/18 14:15:24 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/18 16:12:50 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,16 +72,18 @@ void		rr(t_stack *stack);
 void		rrr(t_stack *stack);
 
 //cal_cost.c
+int			ft_abs(int i);
 int			cal_cost(int index, t_stack *stack, char flag);
 int			locate_cheapest(t_stack *stack, char flag);
-int			ft_abs(int i);
 
 //make_move.c
-void		smart_roll(t_stack *stack, int flag_a, int flag_b);
+void		smart_roll_b(t_stack *stack, int i, int index);
+void		smart_roll_a(t_stack *stack, int i, int index);
 void		make_move_b(t_stack *stack, char flag);
 void		make_move_a(t_stack *stack, char flag);
 
 //pushswap.c
+int			check_sort(t_stack *stack);
 void		sort_three(t_stack *stack);
 void		fin_roll(t_stack *stack);
 void		push_swap(t_stack *stack);
