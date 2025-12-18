@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 10:58:41 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/17 17:17:43 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/18 14:03:36 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,14 @@ void	push_swap(t_stack *stack)
 {
 	if (stack->size_a <= 3)
 		return (sort_three(stack));
-	pb(stack);
-	pb(stack);
-	while (stack->size_a > 3)
+	else if (stack->size_a >= 300)
+		median(stack);
+	else
 	{
-		make_move_b(stack, 'b');
+		pb(stack);
+		pb(stack);
+		while (stack->size_a > 3)
+			make_move_b(stack, 'b');
 	}
 	sort_three(stack);
 	while (stack->size_b > 0)

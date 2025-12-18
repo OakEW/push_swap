@@ -6,13 +6,13 @@
 #    By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 19:07:02 by ywang2            #+#    #+#              #
-#    Updated: 2025/12/17 19:01:10 by ywang2           ###   ########.fr        #
+#    Updated: 2025/12/18 13:47:22 by ywang2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = check_argv_a.c check_argv_b.c set_stack.c\
 		operations_c.c operations_a.c operations_b.c\
-		make_move.c cal_cost.c pushswap.c
+		large.c make_move.c cal_cost.c pushswap.c
 
 CFILES = $(addprefix $(SRCS_DIR), $(SRCS))
 

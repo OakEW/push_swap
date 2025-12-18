@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/17 18:28:47 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/18 13:09:35 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,6 @@ int	check_emt(int argc, char **argv)
 		x = 0;
 	}
 	return (1);
-}
-
-int	*ft_intcpy(int *dest, int *src, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
