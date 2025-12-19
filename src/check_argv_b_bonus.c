@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/19 12:23:39 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:17:20 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_int_arr	*full_check(int argc, char **argv)
 		return (write(2, "Error\n", 6), NULL);
 	data = set_stash(argv);
 	if (!data)
-		return (write(2, "Error\n", 6), NULL);
+		return (NULL);
 	if (check_dup(data, len))
 		return (free (data), write(2, "Error\n", 6), NULL);
 	stash = malloc(sizeof(t_int_arr));
