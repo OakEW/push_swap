@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:12 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/18 16:10:52 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:27:43 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	*set_stash(char **argv)
 			if (**argv != 0 && **argv > 32)
 			{
 				if (ft_atoi(*argv) > INT_MAX || ft_atoi(*argv) < INT_MIN)
-					return (free (stash), NULL);
+					return (free (stash), write(2, "Error\n", 6), NULL);
 				stash[++i] = (int)ft_atoi(*argv);
 				while (**argv != 0 && **argv > 32)
 					(*argv)++;

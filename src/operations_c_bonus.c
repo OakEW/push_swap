@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 12:13:25 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/19 13:09:17 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:29:51 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ss(t_stack *stack)
 	sb(stack);
 }
 
-int	Longer_long(int argc, char **argv)
+int	longer_long(int argc, char **argv)
 {
 	int	x;
 	int	i;

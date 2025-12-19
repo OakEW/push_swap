@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/19 13:15:50 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:31:03 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_int_arr	*full_check(int argc, char **argv)
 		return (NULL);
 	if (check_emt(argc, argv) == 0)
 		return (write(2, "Error\n", 6), NULL);
-	if (Longer_long(argc, argv) == 0)
+	if (longer_long(argc, argv) == 0)
 		return (write(2, "Error\n", 6), NULL);
 	len = get_size(argv);
 	if (len <= 0)
@@ -68,7 +68,7 @@ int	check_emt(int argc, char **argv)
 	return (1);
 }
 
-int	Longer_long(int argc, char **argv)
+int	longer_long(int argc, char **argv)
 {
 	int	x;
 	int	i;
@@ -95,6 +95,7 @@ int	Longer_long(int argc, char **argv)
 	}
 	return (1);
 }
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*mem;
