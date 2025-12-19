@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/19 12:15:35 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 12:23:39 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ t_int_arr	*full_check(int argc, char **argv)
 	if (argc < 2)
 		return (NULL);
 	if (check_emt(argc, argv) == 0)
+		return (write(2, "Error\n", 6), NULL);
+	if (Longer_long(argc, argv) == 0)
 		return (write(2, "Error\n", 6), NULL);
 	len = get_size(argv);
 	if (len <= 0)
@@ -57,7 +59,7 @@ int	check_emt(int argc, char **argv)
 				x++;
 			j++;
 		}
-		if (x == 0 || x >= 17)
+		if (x == 0)
 			return (0);
 		i++;
 		j = 0;

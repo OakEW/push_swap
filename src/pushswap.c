@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 10:58:41 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/18 16:07:41 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:08:22 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,9 +113,8 @@ int	main(int argc, char **argv)
 	stack = set_stack(argc, argv);
 	if (!stack)
 		return (0);
-	if (check_sort(stack))
-		return (0);
-	push_swap(stack);
+	if (!check_sort(stack))
+		push_swap(stack);
 	free (stack->a);
 	free (stack->b);
 	free (stack->in_a);

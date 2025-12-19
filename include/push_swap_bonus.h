@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:04 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/18 16:14:53 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 12:23:12 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int			check_emt(int argc, char **argv);
 int			*ft_intcpy(int *dest, int *src, int n);
 void		*ft_calloc(size_t nmemb, size_t size);
 t_stack		*set_stack(int argc, char **argv);
+
+int			Longer_long(int argc, char **argv);
 
 //operations_bonus
 void		sa(t_stack *stack);

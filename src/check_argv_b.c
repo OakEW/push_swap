@@ -6,7 +6,7 @@
 /*   By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:20:09 by ywang2            #+#    #+#             */
-/*   Updated: 2025/12/19 12:15:47 by ywang2           ###   ########.fr       */
+/*   Updated: 2025/12/19 13:03:22 by ywang2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ t_int_arr	*full_check(int argc, char **argv)
 	if (argc < 2)
 		return (NULL);
 	if (check_emt(argc, argv) == 0)
+		return (write(2, "Error\n", 6), NULL);
+	if (Longer_long(argc, argv) == 0)
 		return (write(2, "Error\n", 6), NULL);
 	len = get_size(argv);
 	if (len <= 0)
@@ -57,7 +59,7 @@ int	check_emt(int argc, char **argv)
 				x++;
 			j++;
 		}
-		if (x == 0 || x >= 17)
+		if (x == 0)
 			return (0);
 		i++;
 		j = 0;
@@ -66,6 +68,33 @@ int	check_emt(int argc, char **argv)
 	return (1);
 }
 
+int	Longer_long(int argc, char **argv)
+{
+	int	x;
+	int	i;
+	int	j;
+
+	x = 0;
+	i = 1;
+	j = 0;
+	while (i < argc)
+	{
+		while (argv[i][j])
+		{
+			if (argv[i][j] != '0' && is_valid(&argv[i][j]))
+				x++;
+			j++;
+			if (argv[i][j] <= 32 && x <= 11)
+				x = 0;
+		}
+		if (x > 11)
+			return (0);
+		i++;
+		j = 0;
+		x = 0;
+	}
+	return (1);
+}
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*mem;
