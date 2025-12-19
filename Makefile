@@ -6,7 +6,7 @@
 #    By: ywang2 <ywang2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 19:07:02 by ywang2            #+#    #+#              #
-#    Updated: 2025/12/18 13:47:22 by ywang2           ###   ########.fr        #
+#    Updated: 2025/12/19 18:22:36 by ywang2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,22 +36,24 @@ B_NAME = checker
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
+all: ${NAME}
 
 ${NAME}: ${OFILES}
 	cc ${CFLAGS} -o ${NAME} ${OFILES}
 
-bonus: $(B_OFILES)
+bonus: ${B_NAME}
+
+${B_NAME}: ${B_OFILES}
 	cc ${CFLAGS} -o ${B_NAME} ${B_OFILES}
 
 %.o: %.c
-	cc -c -g $(CFLAGS) $(INCLUDES) $< -o $@
+	cc -c -g ${CFLAGS} ${INCLUDES} $< -o $@
 
 clean:
-	rm -f $(OFILES) $(B_OFILES)
+	rm -f ${OFILES} ${B_OFILES}
 
 fclean: clean
-	rm -f $(NAME) $(B_NAME)
+	rm -f ${NAME} ${B_NAME}
 
 re: fclean all
 
